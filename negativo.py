@@ -1,5 +1,6 @@
 from imports import *
 
+# INVERSÃO DE PIXELS (NEGATIVO)
 # Aplica transformação de negativo invertendo valores dos pixels.
 # Para imagens float (0-1): subtrai de 1.0
 # Para imagens int (0-255): subtrai de 255
