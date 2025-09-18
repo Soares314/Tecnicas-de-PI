@@ -1,4 +1,4 @@
-# UFT - Universidade Federal do Tocantins Alunos: Thiago Soares Ribeiro Nunes de Carvalho e Vitor Leal
+# UFT - Universidade Federal do Tocantins  Alunos: Thiago Soares Ribeiro Nunes de Carvalho e Vitor Leal
 
 # Técnicas de PI
 
