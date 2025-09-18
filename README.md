@@ -1,4 +1,5 @@
 ### _UFT - Universidade Federal do Tocantins_
+### _Matéria: Processamento de Imagens_
 ### _Alunos: Thiago Soares Ribeiro Nunes de Carvalho e Vitor Leal_
 
 # Técnicas de PI
