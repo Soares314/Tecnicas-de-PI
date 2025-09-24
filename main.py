@@ -3,10 +3,11 @@ import redimensionamento
 import rotulacao
 import negativo
 import rotação
+import histograma
     
 def main():
 
-    imagemLida = ski.io.imread("imagensOri/image6.jpg")
+    imagemLida = ski.io.imread("imagensOri/image3.webp")
     imagemCinza = ski.color.rgb2gray(imagemLida)
     
     thresh = ski.filters.threshold_otsu(imagemCinza)
@@ -15,7 +16,9 @@ def main():
     imagemNegativa = negativo.NegativarImagem(imagemLida)
     imagemRotacionada = rotação.RotacionarImagem(imagemLida, angulo_graus=90)
     imagemBinariaReduzida = redimensionamento.ReducaoPorBilinear(imagemBinaria)
-    imagemRotulada = rotulacao.Rotulacao(imagemBinariaReduzida)
+    imagemCinzaReduzida = redimensionamento.ReducaoPorBilinear(imagemCinza)
+    imagemEqualizada = histograma.EqualizacaoDoHistograma(imagemCinza)
+    
     
     if os.path.exists("imagensGer"):
         shutil.rmtree("imagensGer")
@@ -26,6 +29,6 @@ def main():
     SalvarNovaImagem(imagemNegativa, "imagemNegativa")
     SalvarNovaImagem(imagemRotacionada, "imagemRotacionada")
     SalvarNovaImagem(imagemBinariaReduzida, "imagemBinariaReduzida")
-    SalvarNovaImagem(imagemRotulada, "imagemRotulada")
+    SalvarNovaImagem(imagemEqualizada, "imagemEqualizada")
 
 main()

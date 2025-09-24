@@ -3,6 +3,7 @@ import shutil, os
 import matplotlib.pyplot as plt
 import numpy as np
 import random
+import bisect
 
 def SalvarNovaImagem(imagem, nomeImagem):
     
