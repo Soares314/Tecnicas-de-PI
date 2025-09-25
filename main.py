@@ -4,20 +4,22 @@ import rotulacao
 import negativo
 import rotação
 import histograma
+import filtros
     
 def main():
 
-    imagemLida = ski.io.imread("imagensOri/image3.webp")
+    imagemLida = ski.io.imread("imagensOri/image2.avif")
     imagemCinza = ski.color.rgb2gray(imagemLida)
     
     thresh = ski.filters.threshold_otsu(imagemCinza)
     imagemBinaria = imagemCinza > thresh
     
-    imagemNegativa = negativo.NegativarImagem(imagemLida)
+    """imagemNegativa = negativo.NegativarImagem(imagemLida)
     imagemRotacionada = rotação.RotacionarImagem(imagemLida, angulo_graus=90)
     imagemBinariaReduzida = redimensionamento.ReducaoPorBilinear(imagemBinaria)
     imagemCinzaReduzida = redimensionamento.ReducaoPorBilinear(imagemCinza)
-    imagemEqualizada = histograma.EqualizacaoDoHistograma(imagemCinza)
+    imagemEqualizada = histograma.EqualizacaoDoHistograma(imagemCinza)"""
+    imagemFiltradaPorMedia = filtros.FiltragemMedia(imagemCinza)
     
     
     if os.path.exists("imagensGer"):
@@ -25,10 +27,11 @@ def main():
     
     os.makedirs("imagensGer")
     SalvarNovaImagem(imagemCinza, "imagemCinza")
-    SalvarNovaImagem(imagemBinaria, "imagemBinaria")
+    """SalvarNovaImagem(imagemBinaria, "imagemBinaria")
     SalvarNovaImagem(imagemNegativa, "imagemNegativa")
     SalvarNovaImagem(imagemRotacionada, "imagemRotacionada")
     SalvarNovaImagem(imagemBinariaReduzida, "imagemBinariaReduzida")
-    SalvarNovaImagem(imagemEqualizada, "imagemEqualizada")
+    SalvarNovaImagem(imagemEqualizada, "imagemEqualizada")"""
+    SalvarNovaImagem(imagemFiltradaPorMedia, "imagemFiltradaPorMedia")
 
 main()

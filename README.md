@@ -1,12 +1,15 @@
-# UFT - Universidade Federal do Tocantins
-# Alunos: Thiago Soares Ribeiro Nunes de Carvalho e Vitor Leal
+### _UFT - Universidade Federal do Tocantins_
+### _Matéria: Processamento de Imagens_
+### _Alunos: Thiago Soares Ribeiro Nunes de Carvalho e Vitor Leal_
 
 # Técnicas de PI
 
 ## Base do Projeto
 
 A pasta **imagensOri** possui todas as imagens possíveis de se usar como entrada, caso o usuário queira processar uma imagem específica, ele pode carregar ela dentro desta pasta.
+
 A **requirements.txt** possui todas as dependências necessárias para rodar o projeto. **imports** é o cabeçalho que toda a aplicação  do projeto vai ter que importar, carregando todas as bibliotecas e funções necessárias.
+
 O projeto possui diferentes aplicações, cada uma sendo uma técnica de processamento de imagens diferente. A **main** é a aplicação que irá rodar todas as outras, carregando uma dada imagem de imagensOri, aplicando uma função de uma aplicação desejada nela e gerando uma imagem saída em **imagensGer**.
 
 ## Implementações
