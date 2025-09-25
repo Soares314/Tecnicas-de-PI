@@ -1,5 +1,10 @@
 from imports import *
 import redimensionamento
+import rotulacao
+import negativo
+import rotação
+import histograma
+import filtros
     
 def main():
 
@@ -8,17 +13,25 @@ def main():
     
     thresh = ski.filters.threshold_otsu(imagemCinza)
     imagemBinaria = imagemCinza > thresh
-        
-    imagemReduzidaViz = redimensionamento.ReduçãoPorVizinho(imagemCinza)
-    imagemAmpliadaViz = redimensionamento.AmpliacaoPorVizinho(imagemCinza)
-    imagemReduzidaBilinear = redimensionamento.ReducaoPorBilinear(imagemCinza)
-    imagemAmpliadaBilinear = redimensionamento.AmpliacaoPorBilinear(imagemCinza)
+    
+    """imagemNegativa = negativo.NegativarImagem(imagemLida)
+    imagemRotacionada = rotação.RotacionarImagem(imagemLida, angulo_graus=90)
+    imagemBinariaReduzida = redimensionamento.ReducaoPorBilinear(imagemBinaria)
+    imagemCinzaReduzida = redimensionamento.ReducaoPorBilinear(imagemCinza)
+    imagemEqualizada = histograma.EqualizacaoDoHistograma(imagemCinza)"""
+    imagemFiltradaPorMedia = filtros.FiltragemMedia(imagemCinza)
+    
     
     if os.path.exists("imagensGer"):
         shutil.rmtree("imagensGer")
     
     os.makedirs("imagensGer")
     SalvarNovaImagem(imagemCinza, "imagemCinza")
-    SalvarNovaImagem(imagemBinaria, "imagemBinaria")
+    """SalvarNovaImagem(imagemBinaria, "imagemBinaria")
+    SalvarNovaImagem(imagemNegativa, "imagemNegativa")
+    SalvarNovaImagem(imagemRotacionada, "imagemRotacionada")
+    SalvarNovaImagem(imagemBinariaReduzida, "imagemBinariaReduzida")
+    SalvarNovaImagem(imagemEqualizada, "imagemEqualizada")"""
+    SalvarNovaImagem(imagemFiltradaPorMedia, "imagemFiltradaPorMedia")
 
 main()
