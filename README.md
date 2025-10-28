@@ -21,3 +21,7 @@ Na aplicação **redimensionamento** está as implementações passadas para ent
 ### Implementação 2 - Rotulação, Negativo, Rotação
 
 Na aplicação **rotulacao** está a função de rotulação de uma imagem binária. Em **negativo** está a função que inverte as cores de uma imagem, tendo tanto para imagens cinzas quanto coloridas. Em **rotação** está a função que rotaciona uma imagem, dentro da main na chamada da função o usuário define em quantos graus ela será rotacionada, ajustando o parâmetro **angulo_graus**. Todas essas implementações foram passadas para a data **11/09/2025**. 
+
+### Implementação 3 - Filtros e Histograma
+
+Na aplicação **histograma** está a função que aplica a equalização do histograma em uma imagem. Em **filtros** está a função que filtra uma imagem por média, em **gradiente** por gradiente e em **laplaciana** por laplaciana.
